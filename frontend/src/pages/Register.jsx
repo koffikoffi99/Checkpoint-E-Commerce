@@ -1,10 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+
 
 const Register = () => {
+
+    const [inputs, setInputs] = useState({
+        firstname: "",
+        surname: "",
+        username: "",
+        email: "",
+        password: "",
+        confirm_password: ""
+    })
+    const onChangeHandler = (e) => {
+        const { name, value } = e.target;
+        setInputs(prev => {
+            return {
+                ...prev,
+                [name]: value
+            }
+        })
+    }
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(inputs);
+        //axios pour connecter le backend
+    }
+
+
     return (
         <div className='flex items-center justify-center w-full'>
-            <form className='p-4 py-3 my-5 bg-white border rounded shadow-md'>
+            <form className='p-4 py-3 my-5 bg-white border rounded shadow-md' onSubmit={submitHandler}>
                 <h2 className='w-full p-3 text-xl font-bold text-center text-gray-500'>creer son compte</h2>
 
                 <div className='mb-2'>
@@ -13,6 +39,8 @@ const Register = () => {
                         id="firstname"
                         type="text"
                         placeholder="Nom"
+                        name='firstname'
+                        onChange={onChangeHandler}
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
                 </div>
@@ -23,6 +51,8 @@ const Register = () => {
                         id="surname"
                         type="text"
                         placeholder="Prenom"
+                        name='surname'
+                        onChange={onChangeHandler}
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
                 </div>
@@ -32,6 +62,8 @@ const Register = () => {
                         id="username"
                         type="text"
                         placeholder="Nom d'utilisateur"
+                        name='username'
+                        onChange={onChangeHandler}
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
                 </div>
@@ -42,6 +74,8 @@ const Register = () => {
                         id="email"
                         type="text"
                         placeholder="Email"
+                        name='email'
+                        onChange={onChangeHandler}
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
                 </div>
@@ -51,6 +85,8 @@ const Register = () => {
                     <input
                         id="password"
                         type="text"
+                        name='password'
+                        onChange={onChangeHandler}
                         placeholder="Mot de passe"
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
@@ -60,6 +96,8 @@ const Register = () => {
                     <input
                         id="confirm_password"
                         type="text"
+                        name='confirm_password'
+                        onChange={onChangeHandler}
                         placeholder="Confirmer Mot de passe"
                         className="w-full px-3 py-2 text-gray-500 border border-gray-500 rounded shadow focus:outline-none focus:shadow-md"
                     />
