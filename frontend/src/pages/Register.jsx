@@ -34,7 +34,7 @@ const Register = () => {
                 <h2 className='w-full p-3 text-xl font-bold text-center text-gray-500'>creer son compte</h2>
 
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="firstname">Nom</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="firstname">Nom</label>
                     <input
                         id="firstname"
                         type="text"
@@ -46,7 +46,7 @@ const Register = () => {
                 </div>
 
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="surname">Prenom</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="surname">Prenom</label>
                     <input
                         id="surname"
                         type="text"
@@ -57,7 +57,7 @@ const Register = () => {
                     />
                 </div>
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="username">Nom d'utilisateur</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="username">Nom d'utilisateur</label>
                     <input
                         id="username"
                         type="text"
@@ -69,7 +69,7 @@ const Register = () => {
                 </div>
 
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="email">Email</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="email">Email</label>
                     <input
                         id="email"
                         type="text"
@@ -81,7 +81,7 @@ const Register = () => {
                 </div>
 
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="password">Mot de passe</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="password">Mot de passe</label>
                     <input
                         id="password"
                         type="text"
@@ -92,7 +92,7 @@ const Register = () => {
                     />
                 </div>
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="confirm_password">Confirmer Mot de passe</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="confirm_password">Confirmer Mot de passe</label>
                     <input
                         id="confirm_password"
                         type="text"

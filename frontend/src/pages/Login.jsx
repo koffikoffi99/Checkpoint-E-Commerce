@@ -27,7 +27,7 @@ const Login = () => {
             <form className='p-4 py-3 my-5 bg-white border rounded shadow-md' onSubmit={submitHandler}>
                 <h2 className='w-full p-3 text-xl font-bold text-center text-gray-500'>se connecter a son compte</h2>
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="username">Nom d'utilisateur</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="username">Nom d'utilisateur</label>
                     <input
                         id="username"
                         value={inputs.username}
@@ -40,7 +40,7 @@ const Login = () => {
                 </div>
 
                 <div className='mb-2'>
-                    <label className='mb-2 font-bold text-gray-500' for="password">Mot de passe</label>
+                    <label className='mb-2 font-bold text-gray-500' htmlFor="password">Mot de passe</label>
                     <input
                         id="password"
                         type="text"
